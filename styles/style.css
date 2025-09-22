@@ -1,5 +1,6 @@
 body {
-    background-color: #D4AA7B;
+    background-image: url("/public/assets/background.png");
+    background-size: cover;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -14,37 +15,60 @@ p {
 #navbar {
     background-color: #AD7839;
     padding: 0.3cm;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .navbar_btn {
+    border-radius: 8px;
     text-decoration: none;
     margin: 8px;
-    text-align: center;
-    text-transform: capitalize;
-}
-
-@keyframes btnHover {
-    from {background-color: #AD7839;}
-    to {background-color: #cf9a59; text-size-adjust: 0.5px;}
+    transition-property: all;
+    transition-duration: 0.5s;
 }
 
 .navbar_btn:hover {
-    animation-name: btnHover;
-    animation-duration: .5s;
     background-color: #cf9a59;
-    padding: 2px;
+    box-shadow: 0 0 0 3px #cf9a59;
     border-radius: 3px;
-    margin: 6px;
-}
-
-.navbar_btn:not():hover {
-    background-color: #AD7839;
-    animation-name: btnHover;
-    animation-direction: reverse;
-    animation-duration: 0.5s;
+    margin: 8px;
 }
 
 .navbar_btn:link, .navbar_btn:visited {
     color: white;
+}
+
+#icon {
+    position: relative;
+    text-align: center;
+}
+
+#username {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(10%, -100%);
+    font-size: 50px;
+}
+
+#mango {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -50%);
+}
+
+.link:link, .link:visited {
+    color: white;
+}
+
+#links {
+    position: relative;
+    text-align: center;
+    display: list-item;
+    text-decoration: none;
+    color: white;
+}
+
+.link {
+    margin-bottom: 5px;
 }
